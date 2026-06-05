@@ -49,14 +49,12 @@ export default function HeroSection({ heroImage }) {
             transition={{ duration: 1.2, ease: 'easeOut', delay: 0.3 }}
             className="order-1 lg:order-2 relative"
           >
-            <div className="relative aspect-[3/4] max-h-[70vh] mx-auto lg:mx-0">
+            <div className="relative aspect-[3/4] max-h-[70vh] mx-auto lg:mx-0 shadow-[0_20px_80px_rgba(0,0,0,0.08)] overflow-hidden arch-frame">
               <img
                 src={heroImage}
                 alt="Classical Greek goddess statue in weathered marble with olive leaf shadows"
                 className="w-full h-full object-cover"
               />
-              {/* Subtle overlay for text legibility */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
             </div>
           </motion.div>
         </div>

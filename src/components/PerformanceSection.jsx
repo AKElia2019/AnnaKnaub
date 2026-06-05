@@ -179,11 +179,11 @@ export default function PerformanceSection({ coinImage }) {
             transition={{ duration: 1, delay: 0.3 }}
             className="lg:col-span-4 hidden lg:block"
           >
-            <div className="aspect-square relative overflow-hidden sticky top-24">
+            <div className="aspect-square relative overflow-hidden sticky top-24 shadow-[0_16px_60px_rgba(0,0,0,0.07)] arch-frame">
               <img
                 src={coinImage}
                 alt="Ancient Greek silver tetradrachm coin on Pentelic marble"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover bg-secondary"
               />
             </div>
           </motion.div>

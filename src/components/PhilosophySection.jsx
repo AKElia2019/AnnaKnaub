@@ -34,7 +34,7 @@ function PillarCard({ pillar, index }) {
       transition={{ duration: 0.8, delay: index * 0.2, ease: 'easeOut' }}
       className="group relative"
     >
-      <div className="p-8 md:p-10 border border-border hover:border-accent/40 transition-colors duration-500 h-full">
+      <div className="p-8 md:p-10 border border-border hover:border-accent/40 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-all duration-500 h-full bg-background/70 paper-texture">
         {/* Number */}
         <span className="font-display text-6xl font-light text-accent/30 group-hover:text-accent/60 transition-colors duration-500">
           {pillar.number}
@@ -90,11 +90,11 @@ export default function PhilosophySection({ oliveTreeImage }) {
             transition={{ duration: 1 }}
             className="lg:col-span-5"
           >
-            <div className="aspect-video lg:aspect-[4/5] relative overflow-hidden sticky top-24">
+            <div className="aspect-video lg:aspect-[4/5] relative overflow-hidden sticky top-24 shadow-[0_16px_60px_rgba(0,0,0,0.07)]">
               <img
                 src={oliveTreeImage}
                 alt="Ancient gnarled olive tree trunk at golden hour sunset"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover bg-secondary"
               />
             </div>
           </motion.div>
