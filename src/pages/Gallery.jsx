@@ -129,13 +129,13 @@ const DESIGN_ELEMENTS = [
     caption: 'Botanical column motif',
   },
   {
-    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/7e2a27351_generated_image.png',
-    name: 'Meander & Laurel Divider',
-    caption: 'Horizontal rule element',
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/246d9abdf_generated_image.png',
+    name: 'Botanical Column Panel',
+    caption: 'Horizontal botanical element',
   },
   {
-    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/f754fbede_generated_image.png',
-    name: 'Classical Arch Frame',
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/ae32578fa_generated_image.png',
+    name: 'Layered Arch Frame',
     caption: 'Page framing element',
   },
   {
