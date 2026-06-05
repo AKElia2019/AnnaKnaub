@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <HeroSection heroImage={IMAGES.hero} />
+      <HeroSection />
       <PhilosophySection oliveTreeImage={IMAGES.oliveTree} />
       <PerformanceSection coinImage={IMAGES.coin} />
       <ContactSection groveImage={IMAGES.grove} />
