@@ -1,0 +1,39 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "material": {
+      "type": "string",
+      "enum": [
+        "Gold",
+        "Silver",
+        "Platinum"
+      ]
+    },
+    "weight_oz": {
+      "type": "number"
+    },
+    "price_usd": {
+      "type": "number"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "in_stock": {
+      "type": "boolean",
+      "default": true
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "material",
+    "weight_oz",
+    "price_usd"
+  ]
+}
