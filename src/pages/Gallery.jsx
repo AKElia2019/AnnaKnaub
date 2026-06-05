@@ -278,6 +278,73 @@ const FINANCE_ELEMENTS = [
   },
 ];
 
+const ARTIFACTS = [
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/abe98715f_generated_image.png',
+    name: 'The Library Arch',
+    title: 'Keeper of Written Knowledge',
+    caption: 'Book · Arch · Ivy · Light',
+    domain: 'Story & Language',
+    story: 'Every civilization that ever mattered built a library. Not to store books, but to honor the act of thinking itself — the audacious belief that ideas written down could outlast the person who thought them. This arch is the threshold between what you know now and what you do not yet know. Walk through it.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/da571a003_generated_image.png',
+    name: 'The Celestial Hourglass',
+    title: 'Time as the Greatest Asset',
+    caption: 'Stars · Sand · Cycles',
+    domain: 'Cosmos & Shadow',
+    story: 'Time is the one resource that cannot be earned, borrowed, or reclaimed. The hourglass does not threaten — it clarifies. Every grain of sand is a choice: what to give your hours to, what to let fall away. The stars that orbit it remind us that we are measuring something vast with something small, and that the measurement is sacred.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/107109ba3_generated_image.png',
+    name: 'The Compass Rose',
+    title: 'Orientation in Uncertainty',
+    caption: 'Direction · Olive · True north',
+    domain: 'Mind & Wisdom',
+    story: 'Before GPS, before satellites, before any of the tools we now rely on, there was the compass rose — a map of all the directions one could possibly go. It does not tell you where to go. It only confirms that you can always find your bearing. In finance, in life, in any long journey: the compass rose is the reminder that disorientation is temporary, and orientation is always recoverable.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/7458f5390_generated_image.png',
+    name: 'The Honeycomb',
+    title: 'Collective Abundance',
+    caption: 'Bee · Hexagon · Lavender',
+    domain: 'Nature & Earth',
+    story: 'The honeybee does not build for itself. It builds for the hive — a structure so mathematically perfect that humans have spent centuries trying to improve upon it and failed. The hexagon is the most efficient shape that can tile a plane without gaps. The bee knew this before geometry had a name. Abundance built collectively, with patience and precision, becomes something that outlasts any single life.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/e3989ebd6_generated_image.png',
+    name: 'The Celestial Orrery',
+    title: 'The Mechanics of Everything',
+    caption: 'Planet · Ring · Gear · Orbit',
+    domain: 'Numbers & Cosmos',
+    story: 'An orrery is a mechanical model of the solar system — a human-made object that dares to represent the whole of celestial motion in gears and brass. It is the great ambition of rational thought made physical: that the universe is not random, that its patterns can be studied, modeled, and predicted. Every financial model is, at its best, a kind of orrery.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/aee1f7600_generated_image.png',
+    name: 'The Botanical Silhouette',
+    title: 'Self as Living Architecture',
+    caption: 'Rose · Fern · Laurel · Identity',
+    domain: 'Love & Beauty',
+    story: 'She is made of what she has loved. Her hair is the rose she stopped to notice, the fern she pressed in a book at sixteen, the laurel she wove for someone else\'s victory. We are not separate from the natural world — we are made of it, shaped by it, and in our best moments, we mirror it back: structured, alive, and quietly beautiful.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/e4088813c_generated_image.png',
+    name: 'The Temple Flame',
+    title: 'Where Reason Was Born',
+    caption: 'Column · Rose · Sacred fire',
+    domain: 'Mind & Wisdom',
+    story: 'The ancient Greeks built their temples not as houses for gods, but as homes for ideas. The flame at the altar was never allowed to die — it was the continuous presence of what mattered, tended daily by those who understood that some things must be kept alive deliberately. What flame in your own life requires that kind of faithful tending?',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/7cf8fbb07_generated_image.png',
+    name: 'The Sea Chart',
+    title: 'Navigation Across Uncertainty',
+    caption: 'Mediterranean · Wave · Compass · Olive',
+    domain: 'Story & Language',
+    story: 'Every great journey begins with a map of what is known and a willingness to sail past its edges. The ancient Mediterranean was the cradle of Western thought — its shores lined with traders, philosophers, explorers, and poets who understood that the sea between them was not a barrier but a road. The chart remembers all the routes that were brave enough to be taken.',
+  },
+];
+
 const DESIGN_ELEMENTS = [
   {
     url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/34c38decc_generated_image.png',
@@ -306,7 +373,7 @@ const DESIGN_ELEMENTS = [
 ];
 
 const DOMAINS = ['Mind & Wisdom', 'Love & Beauty', 'Nature & Earth', 'Story & Language', 'Numbers & Cosmos', 'Cosmos & Shadow', 'Fate & Transformation'];
-const ALL_ITEMS = [...DEITIES, ...FINANCE_ELEMENTS, ...DESIGN_ELEMENTS.map(e => ({ ...e, domain: 'Design Element', title: '' }))];
+const ALL_ITEMS = [...DEITIES, ...FINANCE_ELEMENTS, ...ARTIFACTS, ...DESIGN_ELEMENTS.map(e => ({ ...e, domain: 'Design Element', title: '' }))];
 
 const DOMAIN_ACCENT = {
   'Mind & Wisdom': 'text-accent',
@@ -440,6 +507,22 @@ export default function Gallery() {
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
           {FINANCE_ELEMENTS.map((item, i) => {
+            const globalIndex = ALL_ITEMS.findIndex(a => a.name === item.name);
+            return <GalleryCard key={i} item={item} globalIndex={globalIndex} onOpen={setLightbox} />;
+          })}
+        </div>
+      </section>
+
+      <FloralDivider className="px-6 md:px-10" />
+
+      {/* ── ARTIFACTS & EMBLEMS ── */}
+      <section className="max-w-6xl mx-auto px-6 md:px-10 pb-16 pt-16">
+        <div className="flex items-center gap-4 mb-10">
+          <span className="font-body text-[10px] tracking-[0.4em] uppercase text-accent whitespace-nowrap">Artifacts & Emblems</span>
+          <div className="flex-1 h-px bg-border" />
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+          {ARTIFACTS.map((item, i) => {
             const globalIndex = ALL_ITEMS.findIndex(a => a.name === item.name);
             return <GalleryCard key={i} item={item} globalIndex={globalIndex} onOpen={setLightbox} />;
           })}
