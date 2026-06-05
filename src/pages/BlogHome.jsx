@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-import SiteNavbar from '@/components/blog/SiteNavbar.jsx';
-import SiteFooter from '@/components/blog/SiteFooter.jsx';
-import PostCard from '@/components/blog/PostCard.jsx';
-import NewsletterInline from '@/components/blog/NewsletterInline.jsx';
+import SiteNavbar from '@/components/blog/SiteNavbar';
+import SiteFooter from '@/components/blog/SiteFooter';
+import PostCard from '@/components/blog/PostCard';
+import NewsletterInline from '@/components/blog/NewsletterInline';
 import { base44 } from '@/api/base44Client';
 
 const HERO_IMG = 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/41a565a1c_generated_image.png';

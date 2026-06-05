@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
-import SiteNavbar from '@/components/blog/SiteNavbar.jsx';
-import SiteFooter from '@/components/blog/SiteFooter.jsx';
+import SiteNavbar from '@/components/blog/SiteNavbar';
+import SiteFooter from '@/components/blog/SiteFooter';
 import { base44 } from '@/api/base44Client';
 import { toast } from 'sonner';
 

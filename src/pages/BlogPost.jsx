@@ -3,9 +3,9 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import { Clock, ArrowLeft } from 'lucide-react';
-import SiteNavbar from '@/components/blog/SiteNavbar.jsx';
-import SiteFooter from '@/components/blog/SiteFooter.jsx';
-import NewsletterInline from '@/components/blog/NewsletterInline.jsx';
+import SiteNavbar from '@/components/blog/SiteNavbar';
+import SiteFooter from '@/components/blog/SiteFooter';
+import NewsletterInline from '@/components/blog/NewsletterInline';
 import { base44 } from '@/api/base44Client';
 
 const FALLBACK_IMAGES = [

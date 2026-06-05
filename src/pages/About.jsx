@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import SiteNavbar from '@/components/blog/SiteNavbar.jsx';
-import SiteFooter from '@/components/blog/SiteFooter.jsx';
-import NewsletterInline from '@/components/blog/NewsletterInline.jsx';
+import SiteNavbar from '@/components/blog/SiteNavbar';
+import SiteFooter from '@/components/blog/SiteFooter';
+import NewsletterInline from '@/components/blog/NewsletterInline';
 
 const STATUE_IMG = 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/58effd276_generated_image.png';
 const ABUNDANCE_IMG = 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/31c716472_generated_image.png';

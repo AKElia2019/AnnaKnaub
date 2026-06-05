@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import SiteNavbar from '@/components/blog/SiteNavbar.jsx';
-import SiteFooter from '@/components/blog/SiteFooter.jsx';
-import PostCard from '@/components/blog/PostCard.jsx';
-import NewsletterInline from '@/components/blog/NewsletterInline.jsx';
+import SiteNavbar from '@/components/blog/SiteNavbar';
+import SiteFooter from '@/components/blog/SiteFooter';
+import PostCard from '@/components/blog/PostCard';
+import NewsletterInline from '@/components/blog/NewsletterInline';
 import { base44 } from '@/api/base44Client';
 
 const CATEGORIES = ['All', 'Personal Finance', 'Investing', 'FIRE', 'Market Analysis', 'Wealth Building'];
