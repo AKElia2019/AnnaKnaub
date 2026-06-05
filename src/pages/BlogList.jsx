@@ -9,7 +9,7 @@ import { base44 } from '@/api/base44Client';
 
 const CATEGORIES = ['All', 'Personal Finance', 'Investing', 'FIRE', 'Market Analysis', 'Wealth Building'];
 
-const ARCH_IMG = 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/58effd276_generated_image.png';
+const ARCH_IMG = 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/cf24cb86a_generated_image.png';
 
 export default function BlogList() {
   const location = useLocation();

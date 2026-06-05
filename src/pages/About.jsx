@@ -4,8 +4,8 @@ import SiteNavbar from '@/components/blog/SiteNavbar';
 import SiteFooter from '@/components/blog/SiteFooter';
 import NewsletterInline from '@/components/blog/NewsletterInline';
 
-const STATUE_IMG = 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/58effd276_generated_image.png';
-const ABUNDANCE_IMG = 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/31c716472_generated_image.png';
+const STATUE_IMG = 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/c56e6b97c_generated_image.png';
+const ABUNDANCE_IMG = 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/7b3731e96_generated_image.png';
 
 const values = [
   { title: 'Clarity over complexity', body: 'Finance is complicated enough. My job is to make it simple, actionable, and human.' },

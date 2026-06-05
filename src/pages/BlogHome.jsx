@@ -7,8 +7,8 @@ import PostCard from '@/components/blog/PostCard';
 import NewsletterInline from '@/components/blog/NewsletterInline';
 import { base44 } from '@/api/base44Client';
 
-const HERO_IMG = 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/41a565a1c_generated_image.png';
-const COIN_IMG = 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/a5df5a72b_generated_image.png';
+const HERO_IMG = 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/096268133_generated_image.png';
+const COIN_IMG = 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/b67815ce7_generated_image.png';
 
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.15, delayChildren: 0.2 } } };
 const item = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22,1,0.36,1] } } };
@@ -76,7 +76,7 @@ export default function BlogHome() {
                 <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.9, delay: 1.3 }}
                   className="absolute -bottom-5 -left-5 md:-left-10 bg-background border border-border p-3 shadow-lg w-28 md:w-32">
                   <img src={COIN_IMG} alt="" className="w-full h-20 object-cover" />
-                  <p className="font-body text-[9px] tracking-widest uppercase text-muted-foreground mt-1.5 text-center">Wealth Grows</p>
+                  <p className="font-body text-[9px] tracking-widest uppercase text-muted-foreground mt-1.5 text-center">Timeless Beauty</p>
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.9, delay: 1.5 }}

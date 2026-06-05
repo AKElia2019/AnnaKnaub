@@ -9,8 +9,8 @@ import NewsletterInline from '@/components/blog/NewsletterInline';
 import { base44 } from '@/api/base44Client';
 
 const FALLBACK_IMAGES = [
-  'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/41a565a1c_generated_image.png',
-  'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/58effd276_generated_image.png',
+  'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/627b904f8_generated_image.png',
+  'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/5cb76a1d6_generated_image.png',
 ];
 
 export default function BlogPostPage() {

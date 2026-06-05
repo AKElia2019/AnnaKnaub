@@ -12,10 +12,13 @@ const CATEGORY_COLORS = {
 };
 
 const FALLBACK_IMAGES = [
-  'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/41a565a1c_generated_image.png',
-  'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/58effd276_generated_image.png',
-  'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/a5df5a72b_generated_image.png',
-  'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/31c716472_generated_image.png',
+  'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/096268133_generated_image.png',
+  'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/cf24cb86a_generated_image.png',
+  'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/627b904f8_generated_image.png',
+  'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/c56e6b97c_generated_image.png',
+  'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/b67815ce7_generated_image.png',
+  'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/7b3731e96_generated_image.png',
+  'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/5cb76a1d6_generated_image.png',
 ];
 
 export default function PostCard({ post, index = 0, featured = false }) {
