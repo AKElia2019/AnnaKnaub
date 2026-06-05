@@ -11,6 +11,7 @@ import BlogList from '@/pages/BlogList';
 import BlogPostPage from '@/pages/BlogPost';
 import About from '@/pages/About';
 import Newsletter from '@/pages/Newsletter';
+import Gallery from '@/pages/Gallery';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -39,6 +40,7 @@ const AuthenticatedApp = () => {
       <Route path="/blog/:slug" element={<BlogPostPage />} />
       <Route path="/about" element={<About />} />
       <Route path="/newsletter" element={<Newsletter />} />
+      <Route path="/gallery" element={<Gallery />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
