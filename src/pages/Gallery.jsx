@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import SiteNavbar from '@/components/blog/SiteNavbar';
 import SiteFooter from '@/components/blog/SiteFooter';
+import { FloralDivider, FloralFrame } from '@/components/blog/FloralDivider';
 
 const DEITIES = [
   // ── OLYMPIANS ──────────────────────────────────────────────────────────────
@@ -344,7 +345,7 @@ export default function Gallery() {
             <h1 className="font-display font-light text-foreground leading-tight mb-4" style={{ fontSize: 'clamp(2.4rem,5vw,4.5rem)' }}>
               Myth, Memory &amp; <span className="italic text-accent">Mathematics</span>
             </h1>
-            <div className="fluted-divider w-20 mx-auto mb-6" />
+            <FloralDivider className="my-4" />
             <p className="font-body text-sm text-muted-foreground max-w-xl mx-auto leading-relaxed">
               A collection of gods, goddesses, and embodied ideas — each one a dimension of human experience: love, wisdom, fate, language, the cosmos, and the sacred structures of the world.
             </p>
@@ -369,7 +370,7 @@ export default function Gallery() {
       </section>
 
       {/* ── DEITY GRID ── */}
-      <section className="max-w-6xl mx-auto px-6 md:px-10 pb-20">
+      <section className="max-w-6xl mx-auto px-6 md:px-10 pb-20 relative">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-5 gap-y-8">
           <AnimatePresence>
             {filtered.map((item) => {
@@ -385,6 +386,8 @@ export default function Gallery() {
           </AnimatePresence>
         </div>
       </section>
+
+      <FloralDivider className="px-6 md:px-10" />
 
       {/* ── DESIGN ELEMENTS ── */}
       <section className="max-w-6xl mx-auto px-6 md:px-10 pb-24 border-t border-border pt-16">

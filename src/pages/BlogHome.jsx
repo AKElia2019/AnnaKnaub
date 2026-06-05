@@ -5,6 +5,7 @@ import SiteNavbar from '@/components/blog/SiteNavbar';
 import SiteFooter from '@/components/blog/SiteFooter';
 import PostCard from '@/components/blog/PostCard';
 import NewsletterInline from '@/components/blog/NewsletterInline';
+import { FloralDivider, FloralFrame } from '@/components/blog/FloralDivider';
 import { base44 } from '@/api/base44Client';
 
 const HERO_IMG = 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/096268133_generated_image.png';
@@ -92,20 +93,26 @@ export default function BlogHome() {
         <div className="h-px bg-border opacity-40 mx-6 md:mx-10" />
       </section>
 
+      <FloralDivider className="px-6 md:px-10 -mt-2" />
+
       {/* ── FEATURED POST ── */}
       {featured && (
-        <section className="max-w-6xl mx-auto px-6 md:px-10 py-20">
+        <section className="max-w-6xl mx-auto px-6 md:px-10 py-16">
           <div className="flex items-center gap-4 mb-8">
             <span className="font-body text-xs tracking-[0.35em] uppercase text-accent">Featured</span>
             <div className="flex-1 h-px bg-border" />
           </div>
-          <PostCard post={featured} index={0} featured={true} />
+          <FloralFrame className="p-5 md:p-8">
+            <PostCard post={featured} index={0} featured={true} />
+          </FloralFrame>
         </section>
       )}
 
+      <FloralDivider className="px-6 md:px-10" />
+
       {/* ── LATEST POSTS ── */}
       {rest.length > 0 && (
-        <section className="max-w-6xl mx-auto px-6 md:px-10 pb-20">
+        <section className="max-w-6xl mx-auto px-6 md:px-10 py-16 pb-20">
           <div className="flex items-center gap-4 mb-8">
             <span className="font-body text-xs tracking-[0.35em] uppercase text-accent">Latest</span>
             <div className="flex-1 h-px bg-border" />
@@ -116,8 +123,10 @@ export default function BlogHome() {
         </section>
       )}
 
+      <FloralDivider className="px-6 md:px-10" />
+
       {/* ── NEWSLETTER ── */}
-      <section className="max-w-6xl mx-auto px-6 md:px-10 pb-24">
+      <section className="max-w-6xl mx-auto px-6 md:px-10 pb-24 pt-8">
         <NewsletterInline />
       </section>
 
