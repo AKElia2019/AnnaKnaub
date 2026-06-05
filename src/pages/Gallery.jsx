@@ -293,7 +293,7 @@ function GalleryCard({ item, globalIndex, onOpen }) {
         <div className="aspect-[3/4] overflow-hidden">
           <img src={item.url} alt={item.name} className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700" />
         </div>
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent pt-12 pb-4 px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-foreground/80 via-foreground/40 to-transparent pt-12 pb-4 px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
           <p className="font-display text-sm font-light text-primary-foreground italic leading-tight">{item.name}</p>
           <p className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/50 mt-0.5 line-clamp-2">{item.story?.substring(0, 80)}…</p>
         </div>
