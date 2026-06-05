@@ -235,6 +235,49 @@ const DEITIES = [
   },
 ];
 
+const FINANCE_ELEMENTS = [
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/e09c6c9b0_generated_image.png',
+    name: 'Investment Growth',
+    title: 'The Flourishing Portfolio',
+    caption: 'Root · Leaf · Compounding returns',
+    domain: 'Numbers & Cosmos',
+    story: 'Every great fortune begins as a seed — a single decision to plant rather than consume. The roots of disciplined investment reach deep before the canopy becomes visible. Patient capital, like patient gardening, rewards those who tend without grasping. The most powerful force in finance is not intelligence: it is time, and the willingness to leave things undisturbed long enough to grow.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/e3b69b182_generated_image.png',
+    name: 'The Savings Vessel',
+    title: 'Abundance Held in Reserve',
+    caption: 'Jar · Coin · Future self',
+    domain: 'Numbers & Cosmos',
+    story: 'The savings jar is one of humanity\'s oldest financial instruments — a physical act of choosing tomorrow over today. Inside this vessel lives not just money but optionality: the power to weather storms, seize opportunities, and act from a place of security rather than scarcity. Every coin placed inside is a vote of confidence in your future self.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/1fda00eb3_generated_image.png',
+    name: 'Financial Stability',
+    title: 'The Mountain & The Home',
+    caption: 'Mountain · Foundation · Permanence',
+    domain: 'Mind & Wisdom',
+    story: 'True financial stability is not the absence of risk — it is the presence of deep enough roots that storms pass without uprooting you. Like a home built into the mountain, solid financial foundations do not move with every market tremor. They are built slowly, deliberately, layer by layer, until the structure becomes something that outlasts any single season.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/3f57b5af3_generated_image.png',
+    name: 'The Flow of Wealth',
+    title: 'Currency in Motion',
+    caption: 'River · Vault · Velocity of money',
+    domain: 'Numbers & Cosmos',
+    story: 'Money that moves purposefully is money that works. The ancient Romans understood that wealth, like water, must flow to be life-giving — stagnant it becomes inert, directed it becomes powerful. The vault at the river\'s end is not a cage for money but a harbor: a place of intentional rest before the next purposeful deployment.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/14ac82a19_generated_image.png',
+    name: 'The Anchor of Reliability',
+    title: 'Steadfast in All Conditions',
+    caption: 'Anchor · Ship · Trusted course',
+    domain: 'Mind & Wisdom',
+    story: 'A reliable financial plan does not prevent the storm — it ensures you remain seaworthy through it. The anchor is not fear of movement; it is confidence that you will not be swept off course when the winds change. The most enduring wealth is built on the unglamorous virtues: consistency, follow-through, and the refusal to abandon sound principles when markets grow emotional.',
+  },
+];
+
 const DESIGN_ELEMENTS = [
   {
     url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/34c38decc_generated_image.png',
@@ -263,7 +306,7 @@ const DESIGN_ELEMENTS = [
 ];
 
 const DOMAINS = ['Mind & Wisdom', 'Love & Beauty', 'Nature & Earth', 'Story & Language', 'Numbers & Cosmos', 'Cosmos & Shadow', 'Fate & Transformation'];
-const ALL_ITEMS = [...DEITIES, ...DESIGN_ELEMENTS.map(e => ({ ...e, domain: 'Design Element', title: '' }))];
+const ALL_ITEMS = [...DEITIES, ...FINANCE_ELEMENTS, ...DESIGN_ELEMENTS.map(e => ({ ...e, domain: 'Design Element', title: '' }))];
 
 const DOMAIN_ACCENT = {
   'Mind & Wisdom': 'text-accent',
@@ -384,6 +427,22 @@ export default function Gallery() {
               );
             })}
           </AnimatePresence>
+        </div>
+      </section>
+
+      <FloralDivider className="px-6 md:px-10" />
+
+      {/* ── FINANCE ILLUSTRATIONS ── */}
+      <section className="max-w-6xl mx-auto px-6 md:px-10 pb-16 pt-16">
+        <div className="flex items-center gap-4 mb-10">
+          <span className="font-body text-[10px] tracking-[0.4em] uppercase text-accent whitespace-nowrap">Wealth & Wisdom</span>
+          <div className="flex-1 h-px bg-border" />
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
+          {FINANCE_ELEMENTS.map((item, i) => {
+            const globalIndex = ALL_ITEMS.findIndex(a => a.name === item.name);
+            return <GalleryCard key={i} item={item} globalIndex={globalIndex} onOpen={setLightbox} />;
+          })}
         </div>
       </section>
 
