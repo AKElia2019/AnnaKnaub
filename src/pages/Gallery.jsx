@@ -412,6 +412,73 @@ const SCULPTURAL = [
   },
 ];
 
+const BAS_RELIEF = [
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/5aee64cdd_generated_image.png',
+    name: 'Rose Arch I',
+    title: 'The Floral Vault',
+    caption: 'Arch · Plaster · Rose · Gold',
+    domain: 'Love & Beauty',
+    story: 'A grand arch becomes a garden — vines climbing the inner walls in raised plaster relief, and at its base, roses so fully formed they seem to have grown there of their own accord. This is architecture that refuses to be cold.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/07d4dc3c7_generated_image.png',
+    name: 'Golden Medallion',
+    title: 'Circle of Abundance',
+    caption: 'Medallion · Scrollwork · Champagne',
+    domain: 'Love & Beauty',
+    story: 'The circle has always symbolized completion. Framed in gold, filled with the geometry of flowering vines, it asks nothing of the viewer but presence. At its base, roses rest like an offering.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/e6b9b8800_generated_image.png',
+    name: 'Peony Arch',
+    title: 'Softness in Stone',
+    caption: 'Peony · Arch · Ivory · Relief',
+    domain: 'Love & Beauty',
+    story: 'Peonies have been carved in stone and cast in plaster for two thousand years, because no other flower captures abundance so completely. Here they frame an arch, reminding us that beauty requires no justification.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/36ced1a4e_generated_image.png',
+    name: 'Magnolia Vault',
+    title: 'The Spring Arch',
+    caption: 'Magnolia · Branch · Gold stamens',
+    domain: 'Nature & Earth',
+    story: 'Magnolia was one of the earliest flowering trees on earth — it bloomed before bees existed, pollinated by beetles. To carve it into architecture is to honor that ancient beauty, to say: this mattered enough to be made permanent.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/8d487522a_generated_image.png',
+    name: 'Acanthus Panel',
+    title: 'The Classical Border',
+    caption: 'Acanthus · Scroll · Horizontal',
+    domain: 'Mind & Wisdom',
+    story: 'The acanthus leaf has decorated the capitals of Corinthian columns since the 5th century BC. It was chosen not for its fragility but its resilience — the plant that grows back stronger when cut. A fitting emblem for civilization itself.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/1df2779f4_generated_image.png',
+    name: 'Jasmine Oval',
+    title: 'The Scented Arch',
+    caption: 'Jasmine · Oval · Antique gold',
+    domain: 'Love & Beauty',
+    story: 'Jasmine winds and climbs — it does not stand upright, it reaches. In this oval arch it has finally found the frame it always needed: a boundary that allows it to become its fullest, most entwined self.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/14749f341_generated_image.png',
+    name: 'Gothic Rose Arch',
+    title: 'Where Heaven Meets Garden',
+    caption: 'Gothic · Peony · Ivory · Laurel',
+    domain: 'Mind & Wisdom',
+    story: 'The pointed arch was designed to direct the eye upward — toward the divine, toward the sky. Fill it with peonies and the gesture changes: not ascension, but abundance. Not reaching away from the earth, but celebrating it.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/ab949db39_generated_image.png',
+    name: 'Flowering Tree Panel',
+    title: 'The Branching Wall',
+    caption: 'Branch · Rose · Square · Gold corners',
+    domain: 'Nature & Earth',
+    story: 'A tree growing inside a frame is a paradox — contained wildness, structured growth. In this panel the branches spread symmetrically, not because trees grow that way, but because beauty sometimes requires the discipline of a frame.',
+  },
+];
+
 const DESIGN_ELEMENTS = [
   {
     url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/34c38decc_generated_image.png',
@@ -440,7 +507,7 @@ const DESIGN_ELEMENTS = [
 ];
 
 const DOMAINS = ['Mind & Wisdom', 'Love & Beauty', 'Nature & Earth', 'Story & Language', 'Numbers & Cosmos', 'Cosmos & Shadow', 'Fate & Transformation'];
-const ALL_ITEMS = [...DEITIES, ...FINANCE_ELEMENTS, ...ARTIFACTS, ...SCULPTURAL, ...DESIGN_ELEMENTS.map(e => ({ ...e, domain: 'Design Element', title: '' }))];
+const ALL_ITEMS = [...DEITIES, ...FINANCE_ELEMENTS, ...ARTIFACTS, ...SCULPTURAL, ...BAS_RELIEF, ...DESIGN_ELEMENTS.map(e => ({ ...e, domain: 'Design Element', title: '' }))];
 
 const DOMAIN_ACCENT = {
   'Mind & Wisdom': 'text-accent',
@@ -608,6 +675,22 @@ export default function Gallery() {
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
           {SCULPTURAL.map((item, i) => {
+            const globalIndex = ALL_ITEMS.findIndex(a => a.name === item.name);
+            return <GalleryCard key={i} item={item} globalIndex={globalIndex} onOpen={setLightbox} />;
+          })}
+        </div>
+      </section>
+
+      <FloralDivider className="px-6 md:px-10" />
+
+      {/* ── BAS-RELIEF ── */}
+      <section className="max-w-6xl mx-auto px-6 md:px-10 pb-16 pt-16">
+        <div className="flex items-center gap-4 mb-10">
+          <span className="font-body text-[10px] tracking-[0.4em] uppercase text-accent whitespace-nowrap">Bas-Relief</span>
+          <div className="flex-1 h-px bg-border" />
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+          {BAS_RELIEF.map((item, i) => {
             const globalIndex = ALL_ITEMS.findIndex(a => a.name === item.name);
             return <GalleryCard key={i} item={item} globalIndex={globalIndex} onOpen={setLightbox} />;
           })}
