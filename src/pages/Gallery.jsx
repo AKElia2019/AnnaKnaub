@@ -345,6 +345,73 @@ const ARTIFACTS = [
   },
 ];
 
+const SCULPTURAL = [
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/98efe9461_generated_image.png',
+    name: 'The Rose',
+    title: 'Bloom in Relief',
+    caption: 'Petal · Layer · Shadow',
+    domain: 'Love & Beauty',
+    story: 'A single rose reduced to its essential geometry — petal upon petal, each casting a shadow on the one below. What remains when everything decorative is stripped away is still unmistakably a rose. Some things are beautiful in their structure alone.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/2c70cde8d_generated_image.png',
+    name: 'The Threshold',
+    title: 'Archway as Invitation',
+    caption: 'Arch · Depth · Passage',
+    domain: 'Mind & Wisdom',
+    story: 'An arch is a question posed in stone — or paper. Every doorway asks: will you step through? The deeper the layers recede, the greater the sense of what lies beyond. Architecture is frozen anticipation.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/595fd14a8_generated_image.png',
+    name: 'The Peony',
+    title: 'Fullness Without Excess',
+    caption: 'Petal · Fold · Form',
+    domain: 'Love & Beauty',
+    story: 'The peony does not open gradually — it erupts. In a matter of days, a tight bud becomes a globe of layered softness. It is the flower of abundance, of the full moment, of beauty that does not apologize for taking up space.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/c0913e76b_generated_image.png',
+    name: 'The Column',
+    title: 'Weight Held Upward',
+    caption: 'Ring · Stack · Elevation',
+    domain: 'Mind & Wisdom',
+    story: 'The column is civilization\'s oldest structural metaphor. It converts downward weight into upward form. Every institution, every lasting structure — financial, civic, familial — is held up by something that looks, from the outside, deceptively simple.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/0cebd903d_generated_image.png',
+    name: 'The Leaf',
+    title: 'Structure of Growth',
+    caption: 'Vein · Green · Lift',
+    domain: 'Nature & Earth',
+    story: 'A single leaf is an engineering marvel — a network of channels that moves water from root to sky, a solar panel that converts light into sugar, a structure that can bend in wind without breaking. Every vein has a purpose. Nothing is ornament.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/a86e4e9b4_generated_image.png',
+    name: 'The Triple Arch',
+    title: 'Depth as Philosophy',
+    caption: 'Arch · Recession · Void',
+    domain: 'Mind & Wisdom',
+    story: 'Three arches nested inside each other: the first is what you see, the second is what you understand, the third is what you cannot yet name. Classical architecture knew that depth was not merely spatial — it was epistemological. The deeper you go, the more the darkness holds.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/d72198742_generated_image.png',
+    name: 'The Sunflower',
+    title: 'Orientation Toward Light',
+    caption: 'Petal · Disk · Radiance',
+    domain: 'Nature & Earth',
+    story: 'The sunflower does not choose to follow the sun — it is built to. Its orientation is structural, encoded in its very form. To grow toward the light is not effort; it is nature. The question for us is whether we have built our lives in that same direction.',
+  },
+  {
+    url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/a6a3b5918_generated_image.png',
+    name: 'The Dome',
+    title: 'Sky Brought Indoors',
+    caption: 'Dome · Layer · Form',
+    domain: 'Mind & Wisdom',
+    story: 'The dome is humanity\'s attempt to enclose the infinite. It takes the hemisphere of the sky and brings it down to a scale we can inhabit. Inside a dome, you feel simultaneously sheltered and immense. The best ideas have this quality: they make you feel held and expanded at once.',
+  },
+];
+
 const DESIGN_ELEMENTS = [
   {
     url: 'https://media.base44.com/images/public/6a22880d6f3f040d6f180c10/34c38decc_generated_image.png',
@@ -373,7 +440,7 @@ const DESIGN_ELEMENTS = [
 ];
 
 const DOMAINS = ['Mind & Wisdom', 'Love & Beauty', 'Nature & Earth', 'Story & Language', 'Numbers & Cosmos', 'Cosmos & Shadow', 'Fate & Transformation'];
-const ALL_ITEMS = [...DEITIES, ...FINANCE_ELEMENTS, ...ARTIFACTS, ...DESIGN_ELEMENTS.map(e => ({ ...e, domain: 'Design Element', title: '' }))];
+const ALL_ITEMS = [...DEITIES, ...FINANCE_ELEMENTS, ...ARTIFACTS, ...SCULPTURAL, ...DESIGN_ELEMENTS.map(e => ({ ...e, domain: 'Design Element', title: '' }))];
 
 const DOMAIN_ACCENT = {
   'Mind & Wisdom': 'text-accent',
@@ -530,6 +597,22 @@ export default function Gallery() {
       </section>
 
       <FloralDivider className="px-6 md:px-10" />
+
+      <FloralDivider className="px-6 md:px-10" />
+
+      {/* ── SCULPTURAL FORMS ── */}
+      <section className="max-w-6xl mx-auto px-6 md:px-10 pb-16 pt-16">
+        <div className="flex items-center gap-4 mb-10">
+          <span className="font-body text-[10px] tracking-[0.4em] uppercase text-accent whitespace-nowrap">Sculptural Forms</span>
+          <div className="flex-1 h-px bg-border" />
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+          {SCULPTURAL.map((item, i) => {
+            const globalIndex = ALL_ITEMS.findIndex(a => a.name === item.name);
+            return <GalleryCard key={i} item={item} globalIndex={globalIndex} onOpen={setLightbox} />;
+          })}
+        </div>
+      </section>
 
       {/* ── DESIGN ELEMENTS ── */}
       <section className="max-w-6xl mx-auto px-6 md:px-10 pb-24 border-t border-border pt-16">
