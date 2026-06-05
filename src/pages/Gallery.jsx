@@ -293,9 +293,12 @@ function GalleryCard({ item, globalIndex, onOpen }) {
         <div className="aspect-[3/4] overflow-hidden">
           <img src={item.url} alt={item.name} className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700" />
         </div>
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-foreground/95 via-foreground/70 to-transparent pt-16 pb-4 px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
-          <p className="font-display text-sm font-light text-primary-foreground italic leading-tight">{item.name}</p>
-          <p className="font-body text-[9px] tracking-[0.2em] uppercase text-primary-foreground/50 mt-0.5 line-clamp-2">{item.story?.substring(0, 80)}…</p>
+        <div
+          className="absolute bottom-0 left-0 right-0 pt-16 pb-4 px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-400"
+          style={{ background: 'linear-gradient(to top, rgba(40,52,36,0.97) 0%, rgba(40,52,36,0.75) 55%, transparent 100%)' }}
+        >
+          <p className="font-display text-sm font-light text-white italic leading-tight">{item.name}</p>
+          <p className="font-body text-[9px] tracking-[0.2em] uppercase text-white/60 mt-0.5 line-clamp-2">{item.story?.substring(0, 80)}…</p>
         </div>
         {['top-0 left-0 border-t border-l', 'top-0 right-0 border-t border-r', 'bottom-0 left-0 border-b border-l', 'bottom-0 right-0 border-b border-r'].map((cls, i) => (
           <div key={i} className={`absolute w-3 h-3 border-accent/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${cls}`} />
