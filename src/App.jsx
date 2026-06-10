@@ -13,6 +13,9 @@ import About from '@/pages/About';
 import Newsletter from '@/pages/Newsletter';
 import Gallery from '@/pages/Gallery';
 import GoldShop from '@/pages/GoldShop';
+import AurumShop from '@/pages/AurumShop';
+import ClientPortal from '@/pages/ClientPortal';
+import AdminPortal from '@/pages/AdminPortal';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -43,6 +46,9 @@ const AuthenticatedApp = () => {
       <Route path="/newsletter" element={<Newsletter />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/shop" element={<GoldShop />} />
+      <Route path="/gold-shop" element={<AurumShop />} />
+      <Route path="/client-portal" element={<ClientPortal />} />
+      <Route path="/admin" element={<AdminPortal />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
